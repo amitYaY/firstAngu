@@ -1,0 +1,34 @@
+<div>
+  <form name="userForm">
+    <table>
+      <tbody>
+        <tr>
+          <td><label for="name">Full Name</label></td>
+          <td><input type="text" name="name" id="name" ng-model="user.name" required/></td>
+          <!-- {{date|date:'mm/dd/yyyy mm:hh'}} Use of Filter -->
+        </tr>
+        <tr>
+          <td><label for="userId">User Name</label></td>
+          <td><input type="text" name="userId" id="userId" ng-model="user.userId" required/></td>
+
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td><input type="password" name="password" id="password" ng-model="user.password" required/></td>
+        </tr>
+
+        <tr>
+          <td><label for="email">Email Id</label></td>
+          <td><input type="email" name="email" id="email" ng-model="user.email" required/>
+          </td>
+    </tr>
+        <tr>
+          <td><input type="submit" ng-disabled="enableFlag" value="Submit" ng-click="myOnClick(userForm.$valid)"/>
+          <!-- <a ui-sref="userInfo">go  to userInfo</a> here ui-sref is  state name-->
+        </td>
+          <td><input type="reset" value="Reset"/></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
