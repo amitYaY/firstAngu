@@ -1,6 +1,7 @@
-var userModel = require('../model/userInfo');
+var userModels = require('../model/userInfo');
 module.exports.getInfo = function(req, res){
-userModel.find().exec(function(err,result){
+userModels.find().exec(function(err,result){
   console.log(result);
+  res.status(200).send(result);
 });
 }
